@@ -47,7 +47,7 @@ function drawKnob(ctx, radius){
   var grad;
   ctx.beginPath();
   ctx.arc(0, 0, radius, 0, 2*Math.PI);
-  ctx.fillStyle = 'brown';
+  ctx.fillStyle = 'gray';
   ctx.fill();
   grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
   grad.addColorStop(0, '#333');
