@@ -1,0 +1,41 @@
+body{
+  text-align: center;
+}
+
+table{
+  border: solid;
+  width: 600px;
+  margin: auto;
+  column-gap: 10px;
+  background-color: lightgray;
+
+}
+
+#stove{
+  height: 300px;
+  background-color: gray;
+}
+
+table *{
+  border: solid;
+  border-width: 2px;
+  border-color: darkgray;
+}
+
+td{
+  width: 50%;
+}
+
+
+.burner{
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border-radius: 100%;
+  background-color: gray;
+}
+
+.small{
+  width: 125px;
+  height: 125px;
+}

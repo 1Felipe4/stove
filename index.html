@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Stove Top</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <table id="stove">
+      <tr>
+        <td> <canvas id="burner" width="250" height="250"></canvas> </td>
+        <td> <canvas id="small-burner" width="175" height="175"></canvas> </td>
+      </tr>
+
+    </table>
+
+    <table>
+      <tr>
+        <td> <canvas id="knob1" width="150" height="150"></canvas></td>
+        <td> <canvas id="knob2" width="150" height="150"></canvas> </td>
+      </tr>
+      <tr>
+        <td> <input type="range" id="range1" min="4.2"  max="8.2" step="0.2"name="" onchange="update('1')"> </td>
+        <td> <input type="range" id="range2" min="4.2"  max="8.2" step="0.2"name="" onchange="update('2')"> </td>
+      </tr>
+    </table>
+    <script src="script.js" charset="utf-8" onload="draw()"></script>
+  </body>
+</html>
