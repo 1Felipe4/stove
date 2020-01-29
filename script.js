@@ -145,4 +145,4 @@ function update(i){
 
   drawBurner(ctx, radius, color);
 
-}
+}//
