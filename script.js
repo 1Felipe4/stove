@@ -125,7 +125,6 @@ function update(i){
   var ctx =  canvas[i].getContext("2d");
   var radius = canvas[i].height / 2;
 
-  console.log(pos);
 
   drawKnob(ctx, radius);
   drawHand(ctx, pos, 40, 6)
