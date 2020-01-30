@@ -27,7 +27,7 @@ function drawBurner(ctx, radius, color){
   var grad;
   ctx.beginPath();
   ctx.arc(0, 0, radius, 0, 2*Math.PI);
-  ctx.fillStyle = color;
+  ctx.fillStyle = '' + color;
   ctx.fill();
   grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
   grad.addColorStop(0, '#333');
@@ -125,7 +125,6 @@ function update(i){
   var ctx =  canvas[i].getContext("2d");
   var radius = canvas[i].height / 2;
 
-
   drawKnob(ctx, radius);
   drawHand(ctx, pos, 40, 6)
 
@@ -141,6 +140,7 @@ function update(i){
   else{
     color = "red";
   }
+
 
   drawBurner(ctx, radius, color);
 
