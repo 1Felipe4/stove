@@ -8,6 +8,7 @@ table{
   margin: auto;
   column-gap: 10px;
   background-color: lightgray;
+  margin-bottom: 5%;
 
 }
 
@@ -20,6 +21,11 @@ table *{
   border: solid;
   border-width: 2px;
   border-color: darkgray;
+}
+
+.listing{
+  background-color: ghostwhite;
+  border-collapse: collapse;
 }
 
 td{
