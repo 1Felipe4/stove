@@ -45,3 +45,36 @@ td{
   width: 125px;
   height: 125px;
 }
+
+
+section{
+  width: 30%;
+  border: 3px solid black;
+  border-radius: 20%;
+  background-color: darkgray;
+  margin: auto;
+  margin-bottom: 5%;
+
+}
+
+
+nav{
+  background-color: lightgray;
+  border: 3px solid black;
+  border-radius: 20%;
+  float: left;
+  height: 90%;
+  width: 100px;
+  position: fixed;
+}
+
+nav a{
+  margin-bottom: 10%;
+}
+
+.selected{
+  color: gray;
+  text-decoration: underline;
+  text-decoration-color: gray;
+
+}
