@@ -12,6 +12,20 @@ table{
 
 }
 
+.stove{
+  width: 80%;
+  margin: 0 auto;
+}
+.stove section{
+width: 48%;
+float: left;
+height: 50%;
+}
+
+.stove section::after{
+clear: both;
+}
+
 #stove{
   height: 300px;
   background-color: gray;

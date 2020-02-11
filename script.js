@@ -103,6 +103,7 @@ for(num = 1; num < 13; num++){
   ctx.translate(0, radius * 0.85);
   ctx.rotate(-ang);
 }
+
 }
 
 
