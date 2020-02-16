@@ -12,20 +12,6 @@ table{
 
 }
 
-.stove{
-  width: 80%;
-  margin: 0 auto;
-}
-.stove section{
-width: 48%;
-float: left;
-height: 50%;
-}
-
-.stove section::after{
-clear: both;
-}
-
 #stove{
   height: 300px;
   background-color: gray;
@@ -40,11 +26,20 @@ table *{
 .listing{
   background-color: ghostwhite;
   border-collapse: collapse;
+  text-align: left;
+
 }
 
 td{
   width: 50%;
 }
+
+.listing td:nth-child(1){
+  width: 5%;
+  text-align: center;
+}
+
+
 
 
 .burner{
@@ -62,12 +57,14 @@ td{
 
 
 section{
-  width: 30%;
+  width: 40%;
   border: 3px solid black;
   border-radius: 20%;
   background-color: darkgray;
+  padding: 5%;
   margin: auto;
   margin-bottom: 5%;
+  text-align: left;
 
 }
 

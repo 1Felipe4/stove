@@ -2,105 +2,28 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Stove Top</title>
+    <title>Introduction</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <nav>
       <h5>Pages</h5>
-      <a href="index.html" class="selected">Stove</a>
+      <a href="index.html" class="selected">Introduction</a>
       <a href="justification.html"> Justification</a>
+      <a href="stove.html">Stove</a>
     </nav>
+    <section>
+      <h3>Introduction</h3>
 
-    <h3>Stove Prototype</h3>
+      <p>Grandma Ann is getting older. Her 80th Birthday Is coming soon. I want
+        to get her something special. I know she likes to cook. However, I really
+        don't like those gas stoves for her. I think they are dangerous. As A
+        designer, I think I would do up a prototype on how it would work. I think
+         it would make a nice gift, but I should test it first</p>
+    </section>
 
-    <table id="stove">
-      <thead>
-        <strong>1. Stove (Top)</strong>
-      </thead>
-      <tr>
-        <td> <canvas id="burner" width="275" height="275"></canvas> </td>
-        <td> <canvas id="small-burner" width="150" height="150"></canvas> </td>
-      </tr>
-      <tr>
-        <th>2. Big Burner</th>
-        <th>3. Small Burner</th>
-      </tr>
 
-    </table>
 
-    <table>
-      <thead>
-        <strong>4. Stove (Front)</strong>
-      </thead>
-      <tr>
-        <td> <canvas id="knob1" width="200" height="200"></canvas></td>
-        <td> <canvas id="knob2" width="200" height="200"></canvas> </td>
-      </tr>
-      <tr>
-        <th>5. Big Burner's Temperature Display </th>
-        <th>6. Small Burner's Temperature Display</th>
-      </tr>
-</table>
-
-      <table>
-      <tr>
-        <td> <input type="range" id="range1" min="4.2"  max="8.4" step="0.2" value="4.2" onchange="update('1')"> </td>
-        <td> <input type="range" id="range2" min="4.2"  max="8.4" step="0.2" value="4.2" onchange="update('2')"> </td>
-      </tr>
-      <tr>
-        <th>7. Big Burner's Temperature Control</th>
-        <th>8. Small Burner's Temperature Control</th>
-      </tr>
-    </table>
-
-    <table class = "listing">
-      <thead>
-        Listing
-      </thead>
-      <tr>
-        <td>1</td>
-        <td>The Top Of Grandma's 2 Burner Stove, Includes 1 Big Burner And 1 Small Burner</td>
-      </tr>
-
-      <tr>
-        <td>2</td>
-        <td>Big Burner, Suitable For Cooking and Frying <br>
-            Changes Color Based On Temperature
-        </td>
-      </tr>
-
-      <tr>
-        <td>3</td>
-        <td>Small Burner, Suitable For Kettles. Make Hot Tea <br>
-          Changes Color Based On Temperature</td>
-      </tr>
-
-      <tr>
-        <td>4</td>
-        <td>The Front Panel Of The Stove</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Display The Temperature Of The First Burner</td>
-      </tr>
-
-      <tr>
-        <td>6</td>
-        <td>Display The Temperature Of the Small Burner</td>
-      </tr>
-
-      <tr>
-        <td>7</td>
-        <td>Control The Temperature of The Big Burner</td>
-      </tr>
-
-      <tr>
-        <td>8</td>
-        <td>Control The Temperature Of The Small Burner</td>
-      </tr>
-
-    </table>
     <script src="script.js" charset="utf-8" onload="draw()"></script>
   </body>
 </html>
