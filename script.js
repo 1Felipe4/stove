@@ -47,12 +47,12 @@ var x = setInterval(function() {
   if(on === false){
       clearInterval(x);
       document.getElementById("numpad-nums").value = "Timer Cancelled";
-      document.getElementById("numpad-status").innerText = "Type To Set Timer";
+      document.getElementById("numpad-status").innerText = "Press To Set Timer";
     }
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("numpad-nums").value = "Timer Up";
-    document.getElementById("numpad-status").innerText = "Type To Set Timer";
+    document.getElementById("numpad-status").innerText = "Alarming";
     on = false;
     beep[0].play();
     beep[1] = true;
@@ -70,6 +70,7 @@ function numpad (event) {
 if (beep[1] === true) {
 beep[0].pause();
 beep[1] = false;
+document.getElementById("numpad-status").innerText = "Press To Set Timer";
 }
 
   if(td.matches("td")){
@@ -82,7 +83,7 @@ beep[1] = false;
         if(on === true){
           on = false;
           document.getElementById("numpad-nums").value = "Timer Cancelled";
-          document.getElementById("numpad-status").value = "Type To Set Timer";
+          document.getElementById("numpad-status").value = "Press To Set Timer";
         }
           break;
         case "Set":

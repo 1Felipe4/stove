@@ -102,6 +102,13 @@ nav a{
   background-color: gray;
   cursor: pointer;
 }
+.numpad table{
+  margin-bottom: 0px;
+}
+
+#numpad{
+  margin-bottom: 2%;
+}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
