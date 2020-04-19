@@ -1,5 +1,119 @@
 var canvas = [document.getElementById("knob1"),document.getElementById("knob2")];
 var burner = [document.getElementById("burner"), document.getElementById("small-burner")];
+document.getElementById("numpad-nums").value = "";
+
+var on = false;
+var beep = [document.getElementById('beep'), false]
+
+function timer(num, type){
+  let end = new Date();
+  console.log(end);
+
+  switch (type) {
+    case "Hour(s)":
+    end.setTime(end.getTime() + (num*60*60*1000))
+      break;
+    case "Minute(s)":
+    end.setTime(end.getTime() + (num*60*1000))
+      break;
+
+    default:
+
+  }
+  // Update the count down every 1 second
+on = true;
+var x = setInterval(function() {
+
+
+
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = end - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var hours = Math.floor(distance / (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+  hours += Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("numpad-nums").value = hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if(on === false){
+      clearInterval(x);
+      document.getElementById("numpad-nums").value = "Timer Cancelled";
+      document.getElementById("numpad-status").innerText = "Type To Set Timer";
+    }
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("numpad-nums").value = "Timer Up";
+    document.getElementById("numpad-status").innerText = "Type To Set Timer";
+    on = false;
+    beep[0].play();
+    beep[1] = true;
+  }
+}, 1000);
+
+
+}
+
+function numpad (event) {
+  let td = event.target;
+  let nums = document.getElementById("numpad-nums");
+  let type = document.getElementById("numpad-type");
+  let status = document.getElementById("numpad-status");
+if (beep[1] === true) {
+beep[0].pause();
+beep[1] = false;
+}
+
+  if(td.matches("td")){
+    if(isNaN(td.innerText)){
+      switch (td.innerText) {
+        case "Delete":
+        if(!isNaN(nums.value)){
+        nums.value = nums.value.substr(0, nums.value.length-1);
+      }
+        if(on === true){
+          on = false;
+          document.getElementById("numpad-nums").value = "Timer Cancelled";
+          document.getElementById("numpad-status").value = "Type To Set Timer";
+        }
+          break;
+        case "Set":
+        if(!isNaN(nums.value)){
+          timer(nums.value, type.innerText);
+          status.innerText = "Alarm In"
+        }
+        break;
+        case "Minute(s)":
+        type.innerText = "Hour(s)";
+        break;
+        case "Hour(s)":
+        type.innerText ="Minute(s)";
+        break;
+
+
+        default:
+
+      }
+    }else if(on === false){
+      if(isNaN(nums.value)){
+        nums.value = "";
+      }
+      nums.value+=td.innerText;
+      status.innerText = "Setting Timer For"
+    }
+  }
+
+ }
+ const characterList = document.querySelector('.numpad')
+ characterList.addEventListener('click', numpad)
 
 function draw(){
   for (var i = 0; i < canvas.length; i++) {

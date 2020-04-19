@@ -28,23 +28,25 @@
         <th>3. Small Burner</th>
       </tr>
 
+      </table>
+
+
+
+      <table>
+          <thead>
+            <strong>4. Stove (Front)</strong>
+          </thead>
+          <tr>
+            <td> <canvas id="knob1" width="200" height="200"></canvas></td>
+            <td> <canvas id="knob2" width="200" height="200"></canvas> </td>
+          </tr>
+          <tr>
+            <th>5. Big Burner's Temperature Display </th>
+            <th>6. Small Burner's Temperature Display</th>
+          </tr>
     </table>
 
     <table>
-      <thead>
-        <strong>4. Stove (Front)</strong>
-      </thead>
-      <tr>
-        <td> <canvas id="knob1" width="200" height="200"></canvas></td>
-        <td> <canvas id="knob2" width="200" height="200"></canvas> </td>
-      </tr>
-      <tr>
-        <th>5. Big Burner's Temperature Display </th>
-        <th>6. Small Burner's Temperature Display</th>
-      </tr>
-</table>
-
-      <table>
       <tr>
         <td> <input type="range" id="range1" min="4.2"  max="8.4" step="0.2" value="4.2" onchange="update('1')"> </td>
         <td> <input type="range" id="range2" min="4.2"  max="8.4" step="0.2" value="4.2" onchange="update('2')"> </td>
@@ -54,6 +56,42 @@
         <th>8. Small Burner's Temperature Control</th>
       </tr>
     </table>
+    <div class="numpad" id="numpad">
+      <audio src="beep.mp3" loop id="beep">
+
+      </audio>
+    <table>
+      <th id="numpad-status">Type To Set Timer</th>
+      <td>
+        <input type="text" name="" value="0" id="numpad-nums" disabled>
+      </td>
+      <td id="numpad-type">Minute(s)</td>
+    </table>
+    <table>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>Delete</td>
+        <td>0</td>
+        <td>Set</td>
+      </tr>
+    </table>
+</div>
+
+
 
     <table class = "listing">
       <thead>
@@ -100,6 +138,8 @@
         <td>8</td>
         <td>Control The Temperature Of The Small Burner</td>
       </tr>
+
+
 
     </table>
     <script src="script.js" charset="utf-8" onload="draw()"></script>

@@ -89,3 +89,28 @@ nav a{
   text-decoration-color: gray;
 
 }
+
+.numpad td, .numpad th{
+  width: 33%;
+}
+
+.numpad>input{
+  width:595px;
+}
+
+.numpad td:hover{
+  background-color: gray;
+  cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
